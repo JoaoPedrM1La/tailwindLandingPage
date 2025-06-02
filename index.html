@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page com Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .bg-img-gradient {
+            background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/img/bg-masthead.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+        
+        .pt-10 {
+            padding-top: 10rem;
+        }
+        
+        .pb-calc {
+            padding-bottom: calc(10rem - 4.5rem);
+        }
+        
+        @media (min-width: 992px) {
+            .masthead {
+                height: 100vh;
+                min-height: 40rem;
+                padding-top: 4.5rem !important;
+                padding-bottom: 0 !important;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</head>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#page-top" class="text-xl font-bold text-gray-800">CyberSafe</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-gray-900">Sobre</a>
+                    <a href="#services" class="text-gray-600 hover:text-gray-900">Serviços</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-gray-900">Casos</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900">Contato</a>
+                </div>
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead pt-10 pb-calc bg-img-gradient" id="page-top">
+        <div class="container mx-auto h-full px-4">
+            <div class="flex items-center justify-center h-full">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Proteção Digital Completa</h1>
+                    <p class="text-xl md:text-2xl text-white mb-8">Soluções avançadas em cybersegurança para proteger seus dados e sistemas contra ameaças digitais</p>
+                    <a href="#about" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg text-lg">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section class="py-16 bg-orange-600" id="about">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center">
+                <div class="text-center max-w-3xl">
+                    <h2 class="text-3xl font-bold text-white mt-8 mb-6">Sua Segurança é Nossa Prioridade</h2>
+                    <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                    <p class="text-white mb-8 text-lg">Oferecemos as melhores soluções em proteção digital, com tecnologias de ponta e equipe especializada para garantir a integridade dos seus sistemas.</p>
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-orange-600 font-bold py-3 px-6 rounded-lg text-lg">Nossos Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <!-- Services -->
+    <section class="py-16" id="services">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">Nossas Soluções</h2>
+            <div class="w-20 h-1 bg-gray-300 mx-auto mb-12"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <i class="bi bi-gem text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Proteção de Dados</h3>
+                        <p class="text-gray-600 mb-4">Sistemas avançados de criptografia e proteção contra vazamentos</p>
+                        <button data-popover-target="popover-protection" data-popover-placement="top" type="button" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            Info
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <i class="bi bi-laptop text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Detecção de Ameaças</h3>
+                        <p class="text-gray-600 mb-4">Monitoramento 24/7 para identificar e neutralizar vulnerabilidades.</p>
+                        <button data-popover-target="popover-detection" data-popover-placement="top" type="button" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            Info
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <i class="bi bi-globe text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Treinamentos</h3>
+                        <p class="text-gray-600 mb-4">Capacitação de equipes para prevenção de riscos digitais</p>
+                        <button data-popover-target="popover-training" data-popover-placement="top" type="button" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            Info
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <i class="bi bi-heart text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Segurança em Nuvem</h3>
+                        <p class="text-gray-600 mb-4">Proteção completa para seus dados na nuvem</p>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo dos Popovers (adicionar antes do fechamento do </body>) -->
+    <div data-popover id="popover-protection" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0">
+        <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+            <h3 class="font-semibold text-gray-900">Proteção de Dados</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>Sistemas de criptografia de última geração para proteger seus dados sensíveis contra acessos não autorizados.</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+
+    <div data-popover id="popover-detection" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0">
+        <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+            <h3 class="font-semibold text-gray-900">Detecção de Ameaças</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>Nossa equipe monitora sua infraestrutura continuamente para detectar e responder a ameaças em tempo real.</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+
+    <div data-popover id="popover-training" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0">
+        <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+            <h3 class="font-semibold text-gray-900">Detecção de Ameaças</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>Nossa equipe monitora sua infraestrutura continuamente para detectar e responder a ameaças em tempo real.</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+
+    <section class="py-16" id="services">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">Nossas Soluções</h2>
+            <div class="w-20 h-1 bg-gray-300 mx-auto mb-12"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <i class="bi bi-gem text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Proteção de Dados</h3>
+                        <p class="text-gray-600 mb-4">Sistemas avançados de criptografia e proteção contra vazamentos</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <i class="bi bi-laptop text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Detecção de Ameaças</h3>
+                        <p class="text-gray-600 mb-4">Monitoramento 24/7 para identificar e neutralizar vulnerabilidades.</p>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            Info
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <i class="bi bi-globe text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Treinamentos</h3>
+                        <p class="text-gray-600 mb-4">Capacitação de equipes para prevenção de riscos digitais</p>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            Info
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <i class="bi bi-heart text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Segurança em Nuvem</h3>
+                        <p class="text-gray-600 mb-4">Proteção completa para seus dados na nuvem</p>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <div id="portfolio" class="max-w-7xl mx-auto">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">Portfolio</h2>
+            <div class="w-20 h-1 bg-gray-300 mx-auto mb-12"></div>
+            
+            <div class="relative overflow-hidden rounded-lg shadow-xl">
+                <!-- Carousel -->
+                <div class="relative">
+                    <!-- Slides -->
+                    <div class="flex transition-transform duration-300 ease-in-out">
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0">
+                            <img src="/img/portfolio/fullsize/1.jpg" class="w-full h-96 object-cover" alt="Segurança Digital">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                                <h5 class="text-xl font-bold">Financeiro</h5>
+                                <p>Sistema Bancário Seguro</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0">
+                            <img src="/img/portfolio/fullsize/2.jpg" class="w-full h-96 object-cover" alt="Segurança Digital">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                                <h5 class="text-xl font-bold">Financeiro</h5>
+                                <p>Sistema Bancário Seguro</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation buttons -->
+                    <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to action -->
+    <section class="py-16 bg-gray-800 text-white" id="cta">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Pronto para proteger seu negócio?</h2>
+            <a href="#contact" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg text-lg">Fale com nossos especialistas</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-16" id="contact">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center">
+                <div class="text-center max-w-2xl mb-12">
+                    <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
+                    <div class="w-20 h-1 bg-gray-300 mx-auto mb-6"></div>
+                    <p class="text-gray-600">Nossa equipe está pronta para ajudar a proteger seus sistemas contra ameaças digitais</p>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="w-full max-w-lg">
+                    <form id="contactForm" class="space-y-4">
+                        <!-- Name input -->
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Nome completo</label>
+                            <input id="name" type="text" placeholder="Digite seu nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden">Por favor, informe seu nome.</div>
+                        </div>
+                        
+                        <!-- Email input -->
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input id="email" type="email" placeholder="seu@email.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden">Email é obrigatório e deve ser válido.</div>
+                        </div>
+                        
+                        <!-- Phone input -->
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+                            <input id="phone" type="tel" placeholder="(99) 99999-9999" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden">Telefone é obrigatório.</div>
+                        </div>
+                        
+                        <!-- Message input -->
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" placeholder="Descreva suas necessidades" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required></textarea>
+                            <div class="text-red-500 text-sm mt-1 hidden">Por favor, descreva suas necessidades.</div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg text-lg">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mt-12">
+                <div class="text-center">
+                    <i class="bi bi-phone text-3xl text-gray-400 mb-2"></i>
+                    <div class="text-gray-600">contato@cybersafe.com.br</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-100">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            CyberSafe &copy; 2023 - Todos os direitos reservados
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simples validação de formulário
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    let isValid = true;
+                    
+                    // Validação simples
+                    ['name', 'email', 'phone', 'message'].forEach(field => {
+                        const input = document.getElementById(field);
+                        const error = input.nextElementSibling;
+                        
+                        if (!input.value.trim()) {
+                            input.classList.add('border-red-500');
+                            error.classList.remove('hidden');
+                            isValid = false;
+                        } else {
+                            input.classList.remove('border-red-500');
+                            error.classList.add('hidden');
+                        }
+                    });
+                    
+                    // Validação específica para email
+                    const email = document.getElementById('email');
+                    const emailError = email.nextElementSibling;
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+                        email.classList.add('border-red-500');
+                        emailError.classList.remove('hidden');
+                        isValid = false;
+                    }
+                    
+                    if (isValid) {
+                        alert('Mensagem enviada com sucesso!');
+                        form.reset();
+                    }
+                });
+            }
+            
+            // Simulação de popover (substituir por biblioteca específica se necessário)
+            const infoButtons = document.querySelectorAll('[data-bs-toggle="popover"]');
+            infoButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.getAttribute('data-bs-content');
+                    alert(content);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
