@@ -31,6 +31,18 @@
                 padding-bottom: 0 !important;
             }
         }
+
+        .carousel-item {
+            transition: opacity 0.5s ease;
+        }
+        .carousel-item.hidden {
+            display: none;
+            opacity: 0;
+        }
+        .carousel-item.active {
+            display: block;
+            opacity: 1;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </head>
@@ -83,7 +95,6 @@
     </section>
 
     <!-- Services -->
-    <!-- Services -->
     <section class="py-16" id="services">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-6">Nossas Soluções</h2>
@@ -131,7 +142,7 @@
                         <i class="bi bi-heart text-4xl text-blue-600 mb-4"></i>
                         <h3 class="text-xl font-bold mb-3">Segurança em Nuvem</h3>
                         <p class="text-gray-600 mb-4">Proteção completa para seus dados na nuvem</p>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                        <button data-popover-target="popover-security" data-popover-placement="top" type="button" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
                             Info
                         </button>
                     </div>
@@ -163,110 +174,120 @@
 
     <div data-popover id="popover-training" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0">
         <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
-            <h3 class="font-semibold text-gray-900">Detecção de Ameaças</h3>
+            <h3 class="font-semibold text-gray-900">Treinamentos</h3>
         </div>
         <div class="px-3 py-2">
-            <p>Nossa equipe monitora sua infraestrutura continuamente para detectar e responder a ameaças em tempo real.</p>
+            <p>Programas de conscientização e treinamentos práticos para fortalecer a segurança humana em sua organização.</p>
         </div>
         <div data-popper-arrow></div>
     </div>
 
-    <section class="py-16" id="services">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-6">Nossas Soluções</h2>
-            <div class="w-20 h-1 bg-gray-300 mx-auto mb-12"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6 text-center">
-                        <i class="bi bi-gem text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3">Proteção de Dados</h3>
-                        <p class="text-gray-600 mb-4">Sistemas avançados de criptografia e proteção contra vazamentos</p>
-                        
+    <div data-popover id="popover-security" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0">
+        <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
+            <h3 class="font-semibold text-gray-900">Segurança em Nuvem</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>Soluções especializadas para proteger seus dados em ambientes de nuvem pública, privada ou híbrida.</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="container mx-auto py-12 px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">Portfolio</h2>
+        <div class="w-20 h-1 bg-gray-300 mx-auto mb-12"></div>
+        
+        <!-- Carrossel Container -->
+        <div class="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl">
+            <!-- Slides Container -->
+            <div class="relative h-96">
+                <!-- Slide 1 -->
+                <div class="carousel-item active absolute inset-0 w-full h-full">
+                    <img src="/img/portfolio/fullsize/1.jpg" 
+                        alt="Segurança Digital" 
+                        class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <h3 class="text-2xl font-bold text-white">Sistema Bancário Seguro</h3>
+                        <p class="text-white/90">Financeiro</p>
                     </div>
                 </div>
                 
-                <!-- Card 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6 text-center">
-                        <i class="bi bi-laptop text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3">Detecção de Ameaças</h3>
-                        <p class="text-gray-600 mb-4">Monitoramento 24/7 para identificar e neutralizar vulnerabilidades.</p>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
-                            Info
-                        </button>
+                <!-- Slide 2 -->
+                <div class="carousel-item hidden absolute inset-0 w-full h-full">
+                    <img src="/img/portfolio/fullsize/2.jpg" 
+                        alt="Proteção de Dados" 
+                        class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <h3 class="text-2xl font-bold text-white">Plataforma E-commerce</h3>
+                        <p class="text-white/90">Varejo</p>
                     </div>
                 </div>
                 
-                <!-- Card 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6 text-center">
-                        <i class="bi bi-globe text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3">Treinamentos</h3>
-                        <p class="text-gray-600 mb-4">Capacitação de equipes para prevenção de riscos digitais</p>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
-                            Info
-                        </button>
+                <!-- Slide 3 -->
+                <div class="carousel-item hidden absolute inset-0 w-full h-full">
+                    <img src="/img/portfolio/fullsize/3.jpg" 
+                        alt="Cibersegurança" 
+                        class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <h3 class="text-2xl font-bold text-white">Prontuários Eletrônicos</h3>
+                        <p class="text-white/90">Saúde</p>
                     </div>
                 </div>
-                
-                <!-- Card 4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6 text-center">
-                        <i class="bi bi-heart text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3">Segurança em Nuvem</h3>
-                        <p class="text-gray-600 mb-4">Proteção completa para seus dados na nuvem</p>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
-                            Info
-                        </button>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item hidden absolute inset-0 w-full h-full">
+                    <img src="/img/portfolio/fullsize/4.jpg" 
+                        alt="Cibersegurança" 
+                        class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <h3 class="text-2xl font-bold text-white">Sistema Governamental</h3>
+                        <p class="text-white/90">Setor Público</p>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="carousel-item hidden absolute inset-0 w-full h-full">
+                    <img src="/img/portfolio/fullsize/5.jpg" 
+                        alt="Cibersegurança" 
+                        class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <h3 class="text-2xl font-bold text-white">Ambiente Virtual de Aprendizagem</h3>
+                        <p class="text-white/90">Educação</p>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="carousel-item hidden absolute inset-0 w-full h-full">
+                    <img src="/img/portfolio/fullsize/6.jpg" 
+                        alt="Cibersegurança" 
+                        class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <h3 class="text-2xl font-bold text-white">Segurança para IoT</h3>
+                        <p class="text-white/90">Tecnologia</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <div id="portfolio" class="max-w-7xl mx-auto">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-6">Portfolio</h2>
-            <div class="w-20 h-1 bg-gray-300 mx-auto mb-12"></div>
             
-            <div class="relative overflow-hidden rounded-lg shadow-xl">
-                <!-- Carousel -->
-                <div class="relative">
-                    <!-- Slides -->
-                    <div class="flex transition-transform duration-300 ease-in-out">
-                        <!-- Slide 1 -->
-                        <div class="w-full flex-shrink-0">
-                            <img src="/img/portfolio/fullsize/1.jpg" class="w-full h-96 object-cover" alt="Segurança Digital">
-                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                                <h5 class="text-xl font-bold">Financeiro</h5>
-                                <p>Sistema Bancário Seguro</p>
-                            </div>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="w-full flex-shrink-0">
-                            <img src="/img/portfolio/fullsize/2.jpg" class="w-full h-96 object-cover" alt="Segurança Digital">
-                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                                <h5 class="text-xl font-bold">Financeiro</h5>
-                                <p>Sistema Bancário Seguro</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Navigation buttons -->
-                    <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
+            <!-- Controles de Navegação -->
+            <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+            
+            <!-- Indicadores -->
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 focus:bg-white" data-index="0"></button>
+                <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 focus:bg-white" data-index="1"></button>
+                <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 focus:bg-white" data-index="2"></button>
+                <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 focus:bg-white" data-index="3"></button>
+                <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 focus:bg-white" data-index="4"></button>
+                <button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 focus:bg-white" data-index="5"></button>
             </div>
         </div>
     </div>
@@ -391,6 +412,65 @@
                 button.addEventListener('click', function() {
                     const content = this.getAttribute('data-bs-content');
                     alert(content);
+                });
+            });
+        });
+
+        // funções do slide show
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            let currentIndex = 0;
+            let intervalId = null;
+        
+            // Função para mostrar slide específico
+            function showSlide(index) {
+                // Esconde todos os slides
+                items.forEach(item => {
+                    item.classList.add('hidden');
+                    item.classList.remove('active');
+                });
+                
+                // Mostra o slide atual
+                items[index].classList.remove('hidden');
+                items[index].classList.add('active');
+                
+                // Atualiza indicadores
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.remove('bg-white/50');
+                        indicator.classList.add('bg-white');
+                    } else {
+                        indicator.classList.remove('bg-white');
+                        indicator.classList.add('bg-white/50');
+                    }
+                });
+                
+                currentIndex = index;
+            }
+            
+            // Próximo slide
+            function nextSlide() {
+                const newIndex = (currentIndex + 1) % items.length;
+                showSlide(newIndex);
+            }
+            
+            // Slide anterior
+            function prevSlide() {
+                const newIndex = (currentIndex - 1 + items.length) % items.length;
+                showSlide(newIndex);
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Indicadores
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', () => {
+                    showSlide(parseInt(indicator.getAttribute('data-index')));
                 });
             });
         });
